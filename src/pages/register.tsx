@@ -4,7 +4,7 @@ import LeftContent from "@/components/leftContent";
 import Navbar from "@/components/navbar";
 import RightContent from "@/components/rightContent";
 
-export default function Home() {
+export default function Register() {
   return (
     <>
       <Providers>
@@ -15,7 +15,7 @@ export default function Home() {
           </Grid>
           <Grid item xs={6} md={6}>
             <RightContent/>
-            LL
+            RR
           </Grid>
         </Grid>
       </Providers>
