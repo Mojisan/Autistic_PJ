@@ -3,6 +3,7 @@ import { Grid } from "@mui/material";
 import LeftContent from "@/components/leftContent";
 import Navbar from "@/components/navbar";
 import RightContent from "@/components/rightContent";
+import LoginContent from "@/components/loginContent";
 
 export default function LogIn() {
   return (
@@ -14,8 +15,7 @@ export default function LogIn() {
             <LeftContent/>
           </Grid>
           <Grid item xs={6} md={6}>
-            <RightContent/>
-            XX
+            <LoginContent/>
           </Grid>
         </Grid>
       </Providers>

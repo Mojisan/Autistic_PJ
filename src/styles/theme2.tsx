@@ -16,17 +16,20 @@ const theme2 = createTheme({
 theme2.typography.h1 = {
     fontSize: "4vw",
     fontFamily: "Prompt",
-    fontWeight: "300"
+    fontWeight: 300,
+    color: "#212529"
 }
 theme2.typography.h3 = {
     fontSize: "2vw",
     fontFamily: "Prompt",
-    fontWeight: "300",
+    fontWeight: 300,
+    color: "#212529"
 }
 theme2.typography.overline = {
     fontSize: "2.5vw",
     fontFamily: "THSarabunNew",
-    fontWeight: "bold"
+    fontWeight: "bold",
+    color: "#212529"
 }
 
 export default theme2
