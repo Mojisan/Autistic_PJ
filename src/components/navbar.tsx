@@ -11,8 +11,8 @@ type page = {
 const Navbar = () => {
     const pages: page[] = [
         { name: "ข้อมูลทั่วไป", file: "" },
-        { name: "ลงทะเบียน", file: "register" },
-        { name: "เข้าสู่ระบบ", file: "logIn" }
+        { name: "ลงทะเบียน", file: "register_ui" },
+        { name: "เข้าสู่ระบบ", file: "login_ui" }
     ];
 
     return (
@@ -28,7 +28,7 @@ const Navbar = () => {
                                 sx={{ padding: "32px 32px 6px 6px" }}
                             >
                                 <Typography variant='button'>
-                                    <Link href={`/${page.file.toLowerCase()}`} style={{textDecoration: 'none', color: "#434343"}}>
+                                    <Link href={`/${page.file}`} style={{textDecoration: 'none', color: "#434343"}}>
                                         {page.name}
                                     </Link>
                                 </Typography>

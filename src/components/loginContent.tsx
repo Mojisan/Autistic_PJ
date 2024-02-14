@@ -4,6 +4,7 @@ import { Box, Button, Container, FormControl, IconButton, Input, Stack, ThemePro
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
+import ImageLogo from './ImageLogo'
 
 const LoginContent = () => {
     const logo = [1, 2, 3, 4, 5, 8, 7]
@@ -26,7 +27,7 @@ const LoginContent = () => {
                         </IconButton>
                     </FormControl>
                     <Box width="100%" sx={{marginTop: "3rem", display: "flex", justifyContent: "flex-end"}}>
-                        <Link href={".."}>
+                        <Link href={"/forgetPassword_ui"}>
                             <Typography variant='button' sx={{textDecoration: "none"}}>ลืมรหัสผ่านใช่หรือไม่</Typography>
                         </Link>
                     </Box>
@@ -34,16 +35,7 @@ const LoginContent = () => {
                         <Typography variant='h3' sx={{padding: "6px 12px"}}>ลงชื่อเข้าใช้</Typography>
                     </Button>
                 </Box>
-                <Stack direction="row" spacing={2} marginTop="3rem">
-                    {logo.map(num => (
-                        <Box key={num} style={{ width: '50px', height: 'auto' }}>
-                            <Image src={`/images/org/org${num}.png`} alt='logo' width={150} height={100} layout='responsive'/>
-                        </Box>
-                    ))}
-                </Stack>
-                <Box marginTop="1rem">
-                    <Typography variant='body1'>ข้อมูลจากการสำรวจจะนำไปใช้เพื่อประโยชน์ในการวางแผนการจัดบริการของหน่วยงานที่เกี่ยวข้อง</Typography>
-                </Box>
+                <ImageLogo/>
             </Box>
         </Container>
     </ThemeProvider>

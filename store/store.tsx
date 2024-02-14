@@ -1,8 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
+import { reducer } from "./rootReducer";
 
 const store = configureStore({
-    reducer: {}
+    reducer: reducer
 })
 
 export const Providers = (props: React.PropsWithChildren) => {

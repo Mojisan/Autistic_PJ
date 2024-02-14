@@ -3,6 +3,7 @@ import { ThemeProvider } from '@emotion/react'
 import { Box, Button, Container, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
+import ImageLogo from './ImageLogo'
 
 const RegisterContent = () => {
     const logo = [1, 2, 3, 4, 5, 8, 7]
@@ -25,16 +26,7 @@ const RegisterContent = () => {
                         <Typography variant='button' padding="6px 12px" color="#fff">สำหรับผู้ที่ไม่มีบัตรคนพิการ</Typography>
                     </Button>
                 </Box>
-                <Stack direction="row" spacing={2} marginTop="3rem">
-                    {logo.map(num => (
-                        <Box key={num} style={{ width: '50px', height: 'auto' }}>
-                            <Image src={`/images/org/org${num}.png`} alt='logo' width={150} height={100} layout='responsive'/>
-                        </Box>
-                    ))}
-                </Stack>
-                <Box marginTop="1rem">
-                    <Typography variant='body1'>ข้อมูลจากการสำรวจจะนำไปใช้เพื่อประโยชน์ในการวางแผนการจัดบริการของหน่วยงานที่เกี่ยวข้อง</Typography>
-                </Box>
+                <ImageLogo/>
             </Box>
         </Container>
     </ThemeProvider>
