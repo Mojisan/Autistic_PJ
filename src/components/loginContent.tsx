@@ -4,7 +4,7 @@ import { Box, Button, Container, FormControl, IconButton, Input, Stack, ThemePro
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
-import ImageLogo from './ImageLogo'
+import ImageLogo from './imageLogo'
 
 const LoginContent = () => {
     const logo = [1, 2, 3, 4, 5, 8, 7]

@@ -3,7 +3,7 @@ import { ThemeProvider } from '@emotion/react'
 import { Box, Button, Container, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
-import ImageLogo from './ImageLogo'
+import ImageLogo from './imageLogo'
 
 const RegisterContent = () => {
     const logo = [1, 2, 3, 4, 5, 8, 7]
@@ -19,10 +19,10 @@ const RegisterContent = () => {
                 </Box>
                 <Box sx={{width: "70%", backgroundColor: "#707070", height: "1px", display: "block"}}></Box>
                 <Box sx={{display: "flex", flexDirection: "column", marginTop: "3rem"}}>
-                    <Button variant='outlined' color='error' sx={{width: "400px"}}>
+                    <Button variant='outlined' color='error' sx={{width: "400px"}} href='/register-with-card_ui'>
                         <Typography variant='button' padding="6px 12px">สำหรับผู้มีบัตรคนพิการ</Typography>
                     </Button>
-                    <Button variant='contained' color='error' sx={{width: "400px", marginTop: "1rem"}}>
+                    <Button variant='contained' color='error' sx={{width: "400px", marginTop: "1rem"}} href='/dont-have-card_ui'>
                         <Typography variant='button' padding="6px 12px" color="#fff">สำหรับผู้ที่ไม่มีบัตรคนพิการ</Typography>
                     </Button>
                 </Box>
