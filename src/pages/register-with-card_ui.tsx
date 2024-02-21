@@ -7,6 +7,7 @@ import React, { useState } from 'react'
 export default function RegisterWithCard() {
   const [showPassword, setShowPassword] = useState(false)
   const [showPassword2, setShowPassword2] = useState(false)
+  const [check, setCheck] = useState(false)
 
   return (
     <ThemeProvider theme={theme}>
@@ -45,13 +46,19 @@ export default function RegisterWithCard() {
                   พ.ศ. ๒๕๖๒ มาตรา ๑๙
                   </Typography>
                 </Box>
-                <FormControlLabel control={<Checkbox/>} sx={{width: "100%",display: "flex", justifyContent: "flex-start"}} label={<Typography variant='button' sx={{color: "#38A8A9", fontWeight: 600}}>
+                <FormControlLabel control={<Checkbox/>} value={check} onChange={() => setCheck(!check)} sx={{width: "100%",display: "flex", justifyContent: "flex-start"}} label={<Typography variant='button' sx={{color: "#38A8A9", fontWeight: 600}}>
                 ยอมรับข้อตกลงและเงื่อนไข
                 </Typography>}/>
                 <Box display="flex" width="100%" justifyContent="flex-end">
-                  <Button>
-                    <Typography variant='button' fontSize="2vw" fontWeight={600}>ถัดไป &gt;</Typography>
-                  </Button>
+                  {check ? 
+                    <Button variant='text'>
+                      <Typography variant='h3' sx={{padding: "6px 12px"}}>ถัดไป &gt;</Typography>
+                    </Button>
+                    :
+                    <Button variant='text' disabled>
+                      <Typography variant='h3' sx={{padding: "6px 12px"}}>ถัดไป &gt;</Typography>
+                    </Button>
+                  }
                 </Box>
               </Stack>
             </Box>
